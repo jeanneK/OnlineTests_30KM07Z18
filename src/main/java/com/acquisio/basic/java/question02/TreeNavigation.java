@@ -30,6 +30,30 @@ public class TreeNavigation {
         Node n3 = new Node("9", new Node("4"));
         Node n4 = new Node("5", null, n3);
         Node n = new Node("2", n2, n4);
-        // TODO: Implement code here
+        
+   		printChild(n,1);
+
+        
     }
+    
+    private void printChild(Node node,int count) {
+        if(node == null)
+        {
+            return;
+        }
+        else
+        {
+            for(int i = 0 ; i < count ; i++)
+            {
+                System.out.print("..");
+            }
+            System.out.print(node.name);
+            System.out.println();
+            for(Node child : node.children)
+            {
+                printChild(child,count+1);
+            }
+        }
+   }
+    
 }
