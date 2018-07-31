@@ -16,20 +16,19 @@ public class Debugging {
 
     public static void main(String[] args) {
         Debugging instance = new Debugging();
-        System.out.println(instance.removeEvenNumbers(1, 2, 3, 4));
-    }
+        System.out.println(Arrays.toString(instance.removeEvenNumbers(1, 2, 3, 4)));
+	}
 
-    Integer[] removeEvenNumbers(Integer ... values) {
-        // TODO: Fix code here.
+	Integer[] removeEvenNumbers(Integer ... values) {
+		// TODO: Fix code here.
 
-        List<Integer> integers = new ArrayList<>(Arrays.asList(values));
+		List<Integer> integers = new ArrayList<>(Arrays.asList(values));
 
-        for (Integer i : integers) {
-            if (i % 2 == 0) { // remove even numbers
-                integers.remove(i);
-            }
-        }
-
-        return integers.toArray(new Integer[integers.size()]);
-    }
+		for(int i = 0; i < integers.size() ; i++)	{
+			if (integers.get(i)% 2 == 0) { // remove even numbers
+				integers.remove(i);
+			}
+		}
+		return integers.toArray(new Integer[integers.size()]);
+	}
 }
