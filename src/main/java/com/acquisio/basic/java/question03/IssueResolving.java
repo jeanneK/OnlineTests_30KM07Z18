@@ -10,14 +10,19 @@ package com.acquisio.basic.java.question03;
 public class IssueResolving {
     public static void main(String[] args) {
         IssueResolving instance = new IssueResolving();
-        System.out.println(instance.factorial(7));
-    }
+   		System.out.println(instance.factorial(7));
+	}
 
-    int factorial(int n) {
-        // TODO: Fix code here.
-        int result = 0;
-        result = factorial(n - 1) * n;
-        return result;
-    }
+	int factorial(int n) {
+
+		if(n == 1 || n == 0)
+		{
+			return 1;
+		}
+
+		int result = 0;
+		result = factorial(n - 1) * n;
+		return result;
+	}
 
 }
